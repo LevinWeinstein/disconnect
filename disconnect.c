@@ -25,11 +25,12 @@ int main(int argc, char *argv[]){
 	process_id = fork();
 
 	if (process_id < 0){
-		dprintf(2, "errorz\n");
+		dprintf(2, "error making new process\n");
 		exit(1);
 	}
 	if (process_id > 0){
-		printf("I'm a child\n");
+		printf("Hello from the parent process\n");
+		printf("Goodbye from the parent process("leaving now\n");
 		exit(0);
 	}
 	umask(0);
